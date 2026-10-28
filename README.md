@@ -5,7 +5,8 @@ Extensão de navegador (Chrome e outros navegadores Chromium, Manifest V3) que *
 Projeto de Trabalho de Conclusão de Curso — Engenharia da Computação, INATEL.
 
 **Autoras:** Clara de Lima Azevedo e Maria Eduarda de Oliveira.
-**orientador:** Daniel Albino Mosca Rodrigues
+
+**Orientador:** Daniel Albino Mosca Rodrigues
 
 ---
 
