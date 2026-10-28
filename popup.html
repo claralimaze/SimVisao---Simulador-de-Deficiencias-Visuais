@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SimVisão</title>
+    <style>
+      body {
+        width: 260px;
+        font-family: system-ui, Arial, sans-serif;
+        margin: 0;
+        padding: 14px;
+        background: #f7f7f9;
+        color: #1a1a1a;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 4px 0;
+      }
+      p.subtitle {
+        font-size: 11px;
+        color: #666;
+        margin: 0 0 12px 0;
+      }
+      .grupo {
+        margin-bottom: 12px;
+      }
+      .grupo-titulo {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #888;
+        margin-bottom: 6px;
+      }
+      button.efeito {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px 10px;
+        margin-bottom: 6px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: #fff;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      button.efeito:hover {
+        border-color: #999;
+      }
+      button.efeito.active {
+        background: #2563eb;
+        color: #fff;
+        border-color: #2563eb;
+        font-weight: 600;
+      }
+      button.reset {
+        margin-top: 4px;
+      }
+      button.verificar {
+        background: #1f2937;
+        color: #fff;
+        border-color: #1f2937;
+        font-weight: 600;
+      }
+      button.verificar:hover {
+        background: #111827;
+      }
+      .ajustes {
+        margin: 4px 0 12px 0;
+        padding: 8px 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+      .ajuste {
+        margin-bottom: 6px;
+      }
+      .ajuste:last-child {
+        margin-bottom: 0;
+      }
+      .ajuste label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #444;
+      }
+      .ajuste input[type="range"] {
+        width: 100%;
+        margin: 2px 0 0 0;
+      }
+      .oculto {
+        display: none;
+      }
+      p.status {
+        font-size: 11px;
+        color: #b91c1c;
+        margin: 6px 0 0 0;
+        line-height: 1.4;
+      }
+      p.resumo {
+        font-size: 11px;
+        color: #444;
+        margin: 8px 0 0 0;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SimVisão</h1>
+    <p class="subtitle">Simule deficiências visuais nesta página</p>
+
+    <div class="grupo">
+      <div class="grupo-titulo">Daltonismo</div>
+      <button class="efeito" data-effect="protanopia">Protanopia</button>
+      <button class="efeito" data-effect="deuteranopia">Deuteranopia</button>
+      <button class="efeito" data-effect="tritanopia">Tritanopia</button>
+      <button class="efeito" data-effect="acromatopsia">
+        Monocromacia (Acromatopsia)
+      </button>
+    </div>
+
+    <div class="grupo">
+      <div class="grupo-titulo">Baixa visão</div>
+      <button class="efeito" data-effect="baixa-visao">
+        Embaçamento (baixa acuidade)
+      </button>
+      <button class="efeito" data-effect="baixo-contraste">
+        Baixo contraste
+      </button>
+      <button class="efeito" data-effect="visao-tunel">
+        Visão em túnel
+      </button>
+    </div>
+
+    <div id="ajustes" class="ajustes oculto">
+      <div class="grupo-titulo">Ajustes</div>
+      <div class="ajuste oculto" data-ajuste="severidade">
+        <label for="ajuste-severidade">Severidade <span id="valor-severidade"></span></label>
+        <input id="ajuste-severidade" type="range" min="0" max="100" step="5" />
+      </div>
+      <div class="ajuste oculto" data-ajuste="blur">
+        <label for="ajuste-blur">Desfoque <span id="valor-blur"></span></label>
+        <input id="ajuste-blur" type="range" min="0" max="10" step="0.5" />
+      </div>
+      <div class="ajuste oculto" data-ajuste="contrast">
+        <label for="ajuste-contrast">Contraste <span id="valor-contrast"></span></label>
+        <input id="ajuste-contrast" type="range" min="20" max="100" step="5" />
+      </div>
+      <div class="ajuste oculto" data-ajuste="raio">
+        <label for="ajuste-raio">Campo visual (raio) <span id="valor-raio"></span></label>
+        <input id="ajuste-raio" type="range" min="40" max="300" step="10" />
+      </div>
+    </div>
+
+    <button class="efeito reset" data-effect="none">
+      Desativar simulação
+    </button>
+
+    <p id="status" class="status"></p>
+
+    <div class="grupo" style="margin-top: 14px; border-top: 1px solid #ddd; padding-top: 10px;">
+      <div class="grupo-titulo">Verificação automática</div>
+      <button id="verificar-a11y" class="efeito verificar">
+        🔍 Verificar acessibilidade
+      </button>
+      <p id="resumo-a11y" class="resumo"></p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

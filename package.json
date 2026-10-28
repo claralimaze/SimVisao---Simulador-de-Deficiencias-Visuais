@@ -1,0 +1,17 @@
+{
+  "name": "simvisao",
+  "version": "0.3.0",
+  "description": "SimVisão - extensão de navegador que simula deficiências visuais e verifica acessibilidade",
+  "private": true,
+  "scripts": {
+    "test:unit": "node tests/unit.js",
+    "test:popup": "node tests/popup.js",
+    "test:e2e": "node tests/e2e.js",
+    "test": "npm run test:unit && npm run test:popup && npm run test:e2e"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0",
+    "playwright": "^1.48.0",
+    "pngjs": "^7.0.0"
+  }
+}
