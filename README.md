@@ -5,6 +5,7 @@ Extensão de navegador (Chrome e outros navegadores Chromium, Manifest V3) que *
 Projeto de Trabalho de Conclusão de Curso — Engenharia da Computação, INATEL.
 
 **Autoras:** Clara de Lima Azevedo e Maria Eduarda de Oliveira.
+**orientador:** Daniel Albino Mosca Rodrigues
 
 ---
 
@@ -39,7 +40,7 @@ O botão **Verificar acessibilidade** analisa a página e mostra um painel (em S
 
 ## Instalação (modo desenvolvedor)
 
-1. Baixe ou clone este repositório no seu computador (o Chrome precisa ser o do seu computador; não funciona dentro do Codespaces).
+1. Baixe ou clone este repositório no seu computador.
 2. No Chrome, abra `chrome://extensions`.
 3. Ative o **Modo do desenvolvedor** (canto superior direito).
 4. Clique em **Carregar sem compactação** e selecione a pasta que contém o `manifest.json`.
