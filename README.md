@@ -138,7 +138,7 @@ npm test
 
 - Machado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. *A Physiologically-based Model for Simulation of Color Vision Deficiency.* IEEE Transactions on Visualization and Computer Graphics, 15(6), 2009.
 - Brettel, H.; Viénot, F.; Mollon, J. D. *Computerized simulation of color appearance for dichromats.* Journal of the Optical Society of America A, 14(10), 1997.
-- W3C. *Web Content Accessibility Guidelines (WCAG) 2.1* — critérios 1.1.1, 1.4.3, 3.3.2 e 4.1.2.
+- W3C. Web Content Accessibility Guidelines (WCAG) 2.2 — critérios 1.1.1, 1.4.3, 3.3.2 e 4.1.2.
 - W3C WAI. *Before and After Demonstration (BAD).*
 - Chrome for Developers. *Chrome Extensions — Manifest V3* e *Content scripts.*
 
